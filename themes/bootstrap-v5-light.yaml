@@ -430,7 +430,30 @@ customCSS: |
     color: #555555 !important;
     font-size: .75rem !important;
   }
-  [role="listbox"][aria-label="Theme"] [role="option"][aria-selected="true"] span[class*="text-midground/50"] { color: #eaf1f8 !important; }
+
+  [role="listbox"][aria-label="Theme"] [role="option"]:hover,
+  [role="listbox"][aria-label="Theme"] [role="option"][aria-selected="true"],
+  [role="listbox"][aria-label="Theme"] [role="option"][data-highlighted],
+  [role="listbox"][aria-label="Theme"] [role="option"][class~="bg-midground/10"] {
+    color: #ffffff !important;
+    background: linear-gradient(#446e9b, #3f658f 50%, #385a80) !important;
+    text-shadow: none !important;
+  }
+
+  [role="listbox"][aria-label="Theme"] [role="option"]:hover span,
+  [role="listbox"][aria-label="Theme"] [role="option"][aria-selected="true"] span,
+  [role="listbox"][aria-label="Theme"] [role="option"][data-highlighted] span,
+  [role="listbox"][aria-label="Theme"] [role="option"][class~="bg-midground/10"] span {
+    color: #ffffff !important;
+    opacity: 1 !important;
+  }
+
+  [role="listbox"][aria-label="Theme"] [role="option"]:hover span[class*="text-midground/50"],
+  [role="listbox"][aria-label="Theme"] [role="option"][aria-selected="true"] span[class*="text-midground/50"],
+  [role="listbox"][aria-label="Theme"] [role="option"][data-highlighted] span[class*="text-midground/50"],
+  [role="listbox"][aria-label="Theme"] [role="option"][class~="bg-midground/10"] span[class*="text-midground/50"] {
+    color: #eaf1f8 !important;
+  }
 
   :focus-visible {
     outline: 0;
