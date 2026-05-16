@@ -1,0 +1,81 @@
+name: Validate themes
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Validate YAML theme files
+        run: |
+          ruby -e 'require "yaml"; Dir["themes/*.yaml"].sort.each { |f| YAML.load_file(f); puts "ok #{f}" }'
+
+      - name: Verify README screenshot links exist
+        run: |
+          python3 - <<'PY'
+          import pathlib, re, sys
+          readme = pathlib.Path('README.md').read_text()
+          missing = []
+          for path in re.findall(r'!\[[^\]]*\]\(([^)]+)\)', readme):
+              if path.startswith(('http://', 'https://')):
+                  continue
+              if not pathlib.Path(path).exists():
+                  missing.append(path)
+          if missing:
+              print('Missing README images:')
+              print('\n'.join(missing))
+              sys.exit(1)
+          print('README image links ok')
+          PY
+
+      - name: Check version metadata
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+          version = Path('VERSION').read_text().strip()
+          changelog = Path('CHANGELOG.md').read_text()
+          needle = f'## {version} - '
+          if needle not in changelog:
+              raise SystemExit(f'CHANGELOG.md missing heading for VERSION {version!r}')
+          print(f'version ok {version}')
+          PY
+
+      - name: Public-safety text scan
+        run: |
+          python3 - <<'PY'
+          import pathlib, re, sys
+          needles = [
+              r'gh' + r'p_',
+              r'github_' + r'pat_',
+              r'BEGIN ' + r'.*' + r'PRI' + r'VATE',
+              r'api[_-]?' + r'key\s*[:=]',
+              r'/Users' + r'/',
+              r'wink-' + r'inc',
+              r'gitlab' + r'\.com',
+          ]
+          pattern = re.compile('|'.join(needles), re.I)
+          skip_dirs = {'.git'}
+          hits = []
+          for path in pathlib.Path('.').rglob('*'):
+              if any(part in skip_dirs for part in path.parts):
+                  continue
+              if not path.is_file():
+                  continue
+              if path.suffix.lower() in {'.png', '.jpg', '.jpeg', '.webp', '.gif'}:
+                  continue
+              text = path.read_text(errors='ignore')
+              for i, line in enumerate(text.splitlines(), 1):
+                  if pattern.search(line):
+                      hits.append(f'{path}:{i}: {line[:160]}')
+          if hits:
+              print('Potential public-safety matches:')
+              print('\n'.join(hits))
+              sys.exit(1)
+          print('public-safety scan ok')
+          PY

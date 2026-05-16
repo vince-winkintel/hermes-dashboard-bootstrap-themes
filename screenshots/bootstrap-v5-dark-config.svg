@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1040" height="640" viewBox="0 0 1040 640" role="img" aria-label="Bootstrap v5 Dark — Config preview">
+  <rect width="1040" height="640" fill="#272b30"/>
+  <rect x="36" y="36" width="968" height="568" rx="18" fill="#32383e" stroke="#000000"/>
+  <text x="70" y="86" font-family="system-ui, -apple-system, Segoe UI, Roboto, sans-serif" font-size="28" font-weight="700" fill="#ffffff">Bootstrap v5 Dark — Config</text>
+  <text x="70" y="116" font-family="system-ui, -apple-system, Segoe UI, Roboto, sans-serif" font-size="15" fill="#aaaaaa">Slate-style controls, selects, switches, and focused states.</text>
+  <rect x="70" y="134" width="900" height="1" fill="#000000"/>
+  <text x="86" y="150" font-family="system-ui, -apple-system, Segoe UI, Roboto, sans-serif" font-size="13" font-weight="700" fill="#5bc0de" letter-spacing="1.4">SANITIZED DEMO PREVIEW</text>
+  <g font-family="system-ui, -apple-system, Segoe UI, Roboto, sans-serif">
+    <rect x="86" y="150" width="868" height="82" rx="10" fill="#32383e" stroke="#000000"/>
+<text x="116" y="180" font-size="18" font-weight="700" fill="#ffffff">Configuration Controls</text>
+<text x="116" y="205" font-size="13" fill="#aaaaaa">Select fields · switches · focus rings</text>
+<rect x="820" y="175" width="100" height="30" rx="15" fill="#7a8288" opacity="0.16" stroke="#7a8288"/>
+<text x="870" y="195" font-size="11" font-weight="700" text-anchor="middle" fill="#5bc0de">CONFIG</text><rect x="86" y="254" width="868" height="82" rx="10" fill="#32383e" stroke="#000000"/>
+<text x="116" y="284" font-size="18" font-weight="700" fill="#ffffff">Profiles Actions</text>
+<text x="116" y="309" font-size="13" fill="#aaaaaa">Create · Save · Cancel · Bootstrap typography</text>
+<rect x="820" y="279" width="100" height="30" rx="15" fill="#7a8288" opacity="0.16" stroke="#7a8288"/>
+<text x="870" y="299" font-size="11" font-weight="700" text-anchor="middle" fill="#5bc0de">ACTIONS</text><rect x="86" y="358" width="868" height="82" rx="10" fill="#32383e" stroke="#000000"/>
+<text x="116" y="388" font-size="18" font-weight="700" fill="#ffffff">Gateway Status</text>
+<text x="116" y="413" font-size="13" fill="#aaaaaa">Running · sanitized demo state</text>
+<rect x="820" y="383" width="100" height="30" rx="15" fill="#7a8288" opacity="0.16" stroke="#7a8288"/>
+<text x="870" y="403" font-size="11" font-weight="700" text-anchor="middle" fill="#5bc0de">STATUS</text>
+  </g>
+  <rect x="86" y="510" width="868" height="44" rx="8" fill="#272b30" stroke="#000000"/>
+  <circle cx="116" cy="532" r="7" fill="#5bc0de"/>
+  <circle cx="146" cy="532" r="7" fill="#7a8288"/>
+  <circle cx="176" cy="532" r="7" fill="#aaaaaa"/>
+  <text x="210" y="537" font-family="system-ui, -apple-system, Segoe UI, Roboto, sans-serif" font-size="13" fill="#aaaaaa">No private sessions, messages, repos, URLs, or configuration are shown.</text>
+</svg>
