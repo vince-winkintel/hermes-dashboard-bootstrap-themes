@@ -196,6 +196,14 @@ customCSS: |
     background: #3a3f44 !important;
   }
 
+  [role="listbox"][aria-label="Theme"] span[class*="text-midground/50"] {
+    color: #5c636a !important;
+  }
+
+  [role="listbox"][aria-label="Theme"] [role="option"][aria-selected="true"] span[class*="text-midground/50"] {
+    color: #dee2e6 !important;
+  }
+
   .text-muted-foreground {
     color: var(--bs-secondary-color) !important;
   }
