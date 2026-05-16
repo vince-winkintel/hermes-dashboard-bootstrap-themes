@@ -342,6 +342,8 @@ customCSS: |
   pre code:not(.font-courier) {
     display: block;
     color: #f8f9fa !important;
+    font-size: 10px !important;
+    line-height: 1.5;
     background: transparent !important;
     border: 0 !important;
     box-shadow: none !important;

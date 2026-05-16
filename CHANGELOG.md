@@ -16,7 +16,7 @@ Updated Bootstrap v5 Dark to a Bootswatch Slate-inspired palette.
 - Updated checked/on toggle switches to use a Slate success-green track with white thumb while leaving off switches subdued gray.
 - Improved theme selector dropdown description contrast for both normal white rows and the selected dark Slate row.
 - Strengthened the theme selector menu heading contrast with dark, bold Bootstrap-style heading text.
-- Fixed expanded Sessions transcript code blocks so fenced JSON uses Slate-dark `<pre><code>` styling instead of inheriting bright inline-code backgrounds.
+- Fixed expanded Sessions transcript code blocks so fenced JSON uses Slate-dark `<pre><code>` styling instead of inheriting bright inline-code backgrounds, with compact 10px code text.
 
 ## 0.1.0 - 2026-05-15
 
