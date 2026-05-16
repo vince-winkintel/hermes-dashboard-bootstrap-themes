@@ -13,6 +13,7 @@ Updated Bootstrap v5 Dark to a Bootswatch Slate-inspired palette.
 - Updated filled action buttons such as Profiles `+ Create` to use Slate/Bootstrap sans-serif typography and Slate primary button coloring.
 - Tuned Profiles edit-mode actions so `Save` stays compact as a Slate primary button and `Cancel` uses a balanced Slate link-button style.
 - Styled Config custom select/combobox fields to match Bootswatch Slate `.form-select` controls and dropdown listboxes.
+- Updated checked/on toggle switches to use a Slate success-green track with white thumb while leaving off switches subdued gray.
 
 ## 0.1.0 - 2026-05-15
 

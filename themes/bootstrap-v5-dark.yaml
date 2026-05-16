@@ -200,6 +200,31 @@ customCSS: |
     color: var(--bs-secondary-color) !important;
   }
 
+  /* Toggle switches: keep the off state subdued, but make checked/on states
+     visibly success-green so they are easy to distinguish in Config. */
+  [role="switch"] {
+    border-radius: 999rem;
+  }
+
+  [role="switch"] > span {
+    border-radius: 999rem;
+  }
+
+  [role="switch"][aria-checked="true"] {
+    background: linear-gradient(#7dd87d, #62c462 60%, #4e9d4e) !important;
+    border-color: #4e9d4e !important;
+    box-shadow: inset 0 1px 0 rgba(255,255,255,.25), 0 0 0 1px rgba(98,196,98,.18), 0 1px 2px rgba(0,0,0,.35) !important;
+  }
+
+  [role="switch"][aria-checked="true"] > span {
+    background: #ffffff !important;
+    box-shadow: 0 1px 2px rgba(0,0,0,.4) !important;
+  }
+
+  [role="switch"][aria-checked="true"]:focus-visible {
+    box-shadow: inset 0 1px 0 rgba(255,255,255,.25), 0 0 0 .25rem rgba(var(--bs-success-rgb), .25) !important;
+  }
+
   .border-border {
     border-color: var(--bs-border-color) !important;
   }
