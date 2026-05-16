@@ -2,11 +2,11 @@
 
 Polished Bootstrap 5-inspired light and dark themes for the Hermes Agent web dashboard.
 
-This pack keeps Hermes' dashboard portable and local-first while making the UI feel closer to Bootstrap 5.3 defaults: native system fonts, Bootstrap color tokens, predictable radius, readable forms, visible focus rings, and lower visual noise for daily use.
+This pack keeps Hermes' dashboard portable and local-first while making the UI feel closer to polished Bootstrap 5.3 themes: native system fonts, Bootswatch-derived color tokens, predictable radius, readable forms, visible focus rings, and lower visual noise for daily use.
 
 ## Themes
 
-- `bootstrap-v5-light.yaml` — clean Bootstrap light mode with white cards, Bootstrap blue accents, and low-noise background treatment.
+- `bootstrap-v5-light.yaml` — Bootswatch Spacelab-inspired light mode with silvery white surfaces, Spacelab blue gradients, readable gray body text, and polished Bootstrap controls.
 - `bootstrap-v5-dark.yaml` — Bootswatch Slate-inspired dark mode with graphite surfaces, white links, gray body text, Slate component colors, and Bootstrap-style high-contrast inputs.
 
 ## Install
@@ -76,8 +76,9 @@ Recommended release QA coverage:
 
 ## Design notes
 
+- The light theme is inspired by [Bootswatch Spacelab](https://bootswatch.com/spacelab/) v5.3.8 and its public source in [thomaspark/bootswatch](https://github.com/thomaspark/bootswatch/tree/v5/dist/spacelab). It keeps this pack's system font stack while mapping Spacelab's silvery colors and raised blue gradients into Hermes controls.
 - The dark theme is inspired by [Bootswatch Slate](https://bootswatch.com/slate/) v5.3.8 and its public source in [thomaspark/bootswatch](https://github.com/thomaspark/bootswatch/tree/v5/dist/slate).
-- Colors track Bootstrap 5.3 defaults where Hermes' theme schema allows it.
+- Colors track Bootstrap/Bootswatch v5.3 tokens where Hermes' theme schema allows it.
 - Typography uses Bootstrap's native system font stack.
 - The pack intentionally relaxes Hermes' stylized all-uppercase terminal look for better daily readability.
 - No remote fonts or images are required.

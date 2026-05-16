@@ -1,5 +1,15 @@
 # Changelog
 
+## 0.1.2 - 2026-05-16
+
+Updated Bootstrap v5 Light to a Bootswatch Spacelab-inspired palette while keeping the existing system font stack.
+
+- Matched Spacelab v5.3.8 core color tokens from https://bootswatch.com/spacelab/ and https://github.com/thomaspark/bootswatch/tree/v5/dist/spacelab.
+- Reworked the light theme around Spacelab body text `#777`, primary `#446e9b`, secondary `#999`, info `#3399f3`, success `#3cb521`, warning `#d47500`, danger `#cd0200`, light `#eee`, and dark `#333`.
+- Added Spacelab-style raised blue gradients for primary action buttons while preserving Bootstrap/system fonts.
+- Ported the earlier dark-theme refinements into light equivalents for Profiles action buttons, Config custom selects, success-green toggles, theme selector contrast, Models chips/progress bars, inline code, and expanded Sessions transcript code blocks with compact 10px code text.
+- Installed `bootstrap-v5-light` locally and applied it in the dashboard for review.
+
 ## 0.1.1 - 2026-05-15
 
 Updated Bootstrap v5 Dark to a Bootswatch Slate-inspired palette.

@@ -1,12 +1,13 @@
 name: bootstrap-v5-light
 label: Bootstrap v5 Light
-description: Polished Bootstrap 5.3 light theme for the Hermes dashboard; portable, readable, and close to Bootstrap defaults
+description: Bootswatch Spacelab-inspired light theme for the Hermes dashboard; silvery Bootstrap surfaces, Spacelab blue actions, readable controls, and daily-use contrast
+source: "Bootswatch Spacelab v5.3.8 inspired by https://bootswatch.com/spacelab/"
 
 palette:
   background: "#ffffff"
-  midground: "#212529"
-  foreground: "#000000"
-  warmGlow: "rgba(13, 110, 253, 0.10)"
+  midground: "#777777"
+  foreground: "#2d2d2d"
+  warmGlow: "rgba(68, 110, 155, 0.10)"
   noiseOpacity: 0.025
 
 typography:
@@ -29,24 +30,24 @@ assets:
 
 colorOverrides:
   card: "#ffffff"
-  cardForeground: "#212529"
+  cardForeground: "#777777"
   popover: "#ffffff"
-  popoverForeground: "#212529"
-  primary: "#0d6efd"
+  popoverForeground: "#777777"
+  primary: "#446e9b"
   primaryForeground: "#ffffff"
-  secondary: "#e9ecef"
-  secondaryForeground: "#212529"
+  secondary: "#999999"
+  secondaryForeground: "#ffffff"
   muted: "#f8f9fa"
-  mutedForeground: "#6c757d"
-  accent: "#e7f1ff"
-  accentForeground: "#084298"
-  destructive: "#dc3545"
+  mutedForeground: "#666666"
+  accent: "#dae2eb"
+  accentForeground: "#1b2c3e"
+  destructive: "#cd0200"
   destructiveForeground: "#ffffff"
-  success: "#198754"
-  warning: "#ffc107"
+  success: "#3cb521"
+  warning: "#d47500"
   border: "#dee2e6"
   input: "#ffffff"
-  ring: "#0d6efd"
+  ring: "#446e9b"
 
 componentStyles:
   card:
@@ -65,63 +66,61 @@ componentStyles:
   progress:
     borderRadius: "999px"
   backdrop:
-    background: "radial-gradient(circle at 20% 0%, rgba(13, 110, 253, 0.08), transparent 34%), #ffffff"
+    background: "radial-gradient(circle at 20% 0%, rgba(68, 110, 155, 0.08), transparent 34%), #ffffff"
 
 customCSS: |
   :root {
     color-scheme: light;
-    /* Bootstrap 5.3 native font stacks + core design tokens. */
+    /* Preserve the Bootstrap-pack font stacks; Spacelab colors only. */
     --font-sans: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     --font-mono: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
     --font-rules-compressed: var(--font-sans);
     --font-rules-expanded: var(--font-sans);
     --font-mondwest: var(--font-sans);
-    --bs-blue: #0d6efd; --bs-indigo: #6610f2; --bs-purple: #6f42c1; --bs-pink: #d63384;
-    --bs-red: #dc3545; --bs-orange: #fd7e14; --bs-yellow: #ffc107; --bs-green: #198754;
-    --bs-teal: #20c997; --bs-cyan: #0dcaf0; --bs-black: #000; --bs-white: #fff;
-    --bs-gray: #6c757d; --bs-gray-dark: #343a40; --bs-gray-100: #f8f9fa; --bs-gray-200: #e9ecef;
-    --bs-gray-300: #dee2e6; --bs-gray-400: #ced4da; --bs-gray-500: #adb5bd; --bs-gray-600: #6c757d;
-    --bs-gray-700: #495057; --bs-gray-800: #343a40; --bs-gray-900: #212529;
-    --bs-primary: #0d6efd; --bs-secondary: #6c757d; --bs-success: #198754; --bs-info: #0dcaf0;
-    --bs-warning: #ffc107; --bs-danger: #dc3545; --bs-light: #f8f9fa; --bs-dark: #212529;
-    --bs-primary-rgb: 13, 110, 253; --bs-secondary-rgb: 108, 117, 125; --bs-success-rgb: 25, 135, 84;
-    --bs-info-rgb: 13, 202, 240; --bs-warning-rgb: 255, 193, 7; --bs-danger-rgb: 220, 53, 69;
-    --bs-light-rgb: 248, 249, 250; --bs-dark-rgb: 33, 37, 41;
+
+    /* Bootswatch Spacelab v5.3.8 color tokens. */
+    --bs-blue: #446e9b; --bs-indigo: #6610f2; --bs-purple: #6f42c1; --bs-pink: #e83e8c;
+    --bs-red: #cd0200; --bs-orange: #d47500; --bs-yellow: #d47500; --bs-green: #3cb521;
+    --bs-teal: #20c997; --bs-cyan: #3399f3; --bs-black: #000; --bs-white: #fff;
+    --bs-gray: #999; --bs-gray-dark: #333; --bs-gray-100: #f8f9fa; --bs-gray-200: #eee;
+    --bs-gray-300: #dee2e6; --bs-gray-400: #ced4da; --bs-gray-500: #999; --bs-gray-600: #777;
+    --bs-gray-700: #555; --bs-gray-800: #333; --bs-gray-900: #2d2d2d;
+    --bs-primary: #446e9b; --bs-secondary: #999; --bs-success: #3cb521; --bs-info: #3399f3;
+    --bs-warning: #d47500; --bs-danger: #cd0200; --bs-light: #eee; --bs-dark: #333;
+    --bs-primary-rgb: 68, 110, 155; --bs-secondary-rgb: 153, 153, 153; --bs-success-rgb: 60, 181, 33;
+    --bs-info-rgb: 51, 153, 243; --bs-warning-rgb: 212, 117, 0; --bs-danger-rgb: 205, 2, 0;
+    --bs-light-rgb: 238, 238, 238; --bs-dark-rgb: 51, 51, 51;
     --bs-font-sans-serif: var(--font-sans); --bs-font-monospace: var(--font-mono);
     --bs-body-font-family: var(--bs-font-sans-serif); --bs-body-font-size: 1rem; --bs-body-font-weight: 400;
-    --bs-body-line-height: 1.5; --bs-body-color: #212529; --bs-body-color-rgb: 33, 37, 41;
-    --bs-body-bg: #fff; --bs-body-bg-rgb: 255, 255, 255; --bs-emphasis-color: #000; --bs-emphasis-color-rgb: 0, 0, 0;
-    --bs-secondary-color: rgba(33, 37, 41, 0.75); --bs-secondary-bg: #e9ecef; --bs-tertiary-color: rgba(33, 37, 41, 0.5);
+    --bs-body-line-height: 1.5; --bs-body-color: #777; --bs-body-color-rgb: 119, 119, 119;
+    --bs-body-bg: #fff; --bs-body-bg-rgb: 255, 255, 255; --bs-emphasis-color: #2d2d2d; --bs-emphasis-color-rgb: 45, 45, 45;
+    --bs-secondary-color: rgba(119, 119, 119, 0.75); --bs-secondary-bg: #eee; --bs-tertiary-color: rgba(119, 119, 119, 0.5);
     --bs-tertiary-bg: #f8f9fa; --bs-border-color: #dee2e6; --bs-border-color-translucent: rgba(0, 0, 0, 0.175);
-    --bs-border-radius: 0.375rem; --bs-link-color: #0d6efd; --bs-link-hover-color: #0a58ca;
+    --bs-border-radius: 0.375rem; --bs-link-color: #3399f3; --bs-link-hover-color: #0a6ebd; --bs-code-color: #e83e8c;
   }
-  
+
   html, body, #root {
     background: var(--bs-body-bg);
     color: var(--bs-body-color);
     font-family: var(--font-sans);
     line-height: var(--bs-body-line-height);
   }
-  
+
   body, button, input, textarea, select {
     font-family: var(--font-sans);
     text-transform: none;
   }
-  
+
   code, pre, kbd, samp {
     font-family: var(--font-mono);
     text-transform: none;
   }
-  
+
   a { color: var(--bs-link-color); text-decoration-thickness: 0.08em; text-underline-offset: 0.18em; }
   a:hover { color: var(--bs-link-hover-color); }
-  
-  /* The dashboard shell ships with an intentionally stylized uppercase terminal look.
-     This pack relaxes that into Bootstrap's daily-use text rhythm while leaving labels scannable. */
-  [data-layout-variant="standard"] {
-    text-transform: none;
-  }
-  
+
+  [data-layout-variant="standard"] { text-transform: none; }
+
   aside, nav, header, footer,
   aside a, nav a,
   button,
@@ -129,50 +128,233 @@ customCSS: |
   .uppercase {
     letter-spacing: .015em;
   }
-  
+
   input, textarea, select {
-    background-color: var(--bs-tertiary-bg);
+    background-color: var(--bs-body-bg);
     color: var(--bs-body-color);
     border: 1px solid var(--bs-border-color);
     border-radius: var(--bs-border-radius);
   }
-  
-  .text-muted-foreground {
-    color: var(--bs-secondary-color) !important;
+
+  input:focus, textarea:focus, select:focus {
+    border-color: #a2b7cd !important;
+    box-shadow: 0 0 0 .25rem rgba(var(--bs-primary-rgb), .25) !important;
   }
-  
-  .border-border {
-    border-color: var(--bs-border-color) !important;
-  }
-  
+
   input::placeholder, textarea::placeholder {
     color: var(--bs-secondary-color);
     opacity: 1;
   }
-  
-  button, [role="button"] {
-    border-radius: var(--bs-border-radius);
+
+  .text-muted-foreground { color: #666666 !important; }
+  .border-border { border-color: var(--bs-border-color) !important; }
+  .bg-card\/80, .bg-card { background-color: #ffffff !important; }
+
+  button, [role="button"] { border-radius: var(--bs-border-radius); }
+
+  /* Spacelab-style raised primary action buttons, preserving Bootstrap-pack fonts. */
+  button[class*="font-mono"][class*="bg-midground"][class*="text-background-base"] {
+    font-family: var(--bs-body-font-family) !important;
+    font-size: .875rem !important;
+    font-weight: 400 !important;
+    line-height: 1.25;
+    letter-spacing: 0 !important;
+    text-transform: none !important;
+    color: #ffffff !important;
+    background: linear-gradient(#7191b3, #446e9b 50%, #3f658f) !important;
+    border: 1px solid #36587c !important;
+    box-shadow: inset 0 1px 0 rgba(255,255,255,.16), 0 .125rem .25rem rgba(0,0,0,.12) !important;
+    text-shadow: -1px -1px 0 rgba(0,0,0,.1);
   }
-  
+
+  button[class*="font-mono"][class*="bg-midground"][class*="text-background-base"]:hover {
+    background: linear-gradient(#6687ab, #3a5e84 50%, #36587c) !important;
+    border-color: #335374 !important;
+  }
+
+  button[class*="font-mono"][class*="bg-midground"][class*="text-background-base"]:not([class*="px-2"]) {
+    padding: .625rem .9rem !important;
+  }
+
+  button[class*="font-mono"][class*="bg-midground"][class*="text-background-base"][class*="px-2"],
+  button[class*="font-mono"][class*="bg-midground"][class*="text-background-base"][class*="py-1.5"] {
+    line-height: 1.5;
+    padding: .375rem .75rem !important;
+  }
+
+  button[class*="font-mono"][class*="text-muted-foreground"][class*="hover:text-foreground"],
+  button[class*="font-mono"][class*="bg-transparent"][class*="text-current"] {
+    font-family: var(--bs-body-font-family) !important;
+    font-size: .875rem !important;
+    font-weight: 400 !important;
+    line-height: 1.5;
+    letter-spacing: 0 !important;
+    text-transform: none !important;
+    color: var(--bs-link-color) !important;
+    background: transparent !important;
+    border: 1px solid transparent !important;
+    box-shadow: none !important;
+    padding: .375rem .75rem !important;
+    text-decoration: underline;
+    text-underline-offset: .18em;
+    text-shadow: none;
+  }
+
+  /* Config custom comboboxes/selects: match Spacelab .form-select. */
+  button[role="combobox"][class*="bg-background/40"] {
+    font-family: var(--bs-body-font-family) !important;
+    color: var(--bs-body-color) !important;
+    background-color: var(--bs-body-bg) !important;
+    background-image: none !important;
+    border: 1px solid var(--bs-border-color) !important;
+    border-radius: var(--bs-border-radius);
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.075) !important;
+    text-shadow: none !important;
+  }
+
+  button[role="combobox"][class*="bg-background/40"] svg { color: #333 !important; opacity: 1; }
+
+  button[role="combobox"][class*="bg-background/40"]:focus-visible {
+    border-color: #a2b7cd !important;
+    box-shadow: 0 0 0 .25rem rgba(var(--bs-primary-rgb), .25) !important;
+  }
+
+  [role="listbox"][class*="bg-background-base"] {
+    color: var(--bs-body-color) !important;
+    background-color: #ffffff !important;
+    border: 1px solid var(--bs-border-color) !important;
+    border-radius: var(--bs-border-radius);
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,.15) !important;
+  }
+
+  [role="listbox"][class*="bg-background-base"] [role="option"] {
+    font-family: var(--bs-body-font-family) !important;
+    color: var(--bs-body-color) !important;
+    background: transparent !important;
+    text-shadow: none;
+  }
+
+  [role="listbox"][class*="bg-background-base"] [role="option"]:hover,
+  [role="listbox"][class*="bg-background-base"] [role="option"][aria-selected="true"] {
+    color: #ffffff !important;
+    background: linear-gradient(#7191b3, #446e9b 50%, #3f658f) !important;
+  }
+
+  /* Config/Admin toggles: success-green on state, subdued off state. */
+  [role="switch"], [role="switch"] > span { border-radius: 999rem; }
+  [role="switch"][aria-checked="true"] {
+    background: linear-gradient(#59d83e, #3cb521 50%, #339a1c) !important;
+    border-color: #30911a !important;
+    box-shadow: inset 0 1px 0 rgba(255,255,255,.25), 0 0 0 1px rgba(var(--bs-success-rgb), .18), 0 1px 2px rgba(0,0,0,.2) !important;
+  }
+  [role="switch"][aria-checked="true"] > span {
+    background: #ffffff !important;
+    box-shadow: 0 1px 2px rgba(0,0,0,.35) !important;
+  }
+  [role="switch"][aria-checked="true"]:focus-visible {
+    box-shadow: 0 0 0 .25rem rgba(var(--bs-success-rgb), .25) !important;
+  }
+
+  /* Theme selector dropdown: Bootstrap/Spacelab popover contrast. */
+  [role="listbox"][aria-label="Theme"] {
+    background: #ffffff !important;
+    color: #777777 !important;
+    border-color: var(--bs-border-color) !important;
+  }
+  [role="listbox"][aria-label="Theme"] > div:first-child > span:first-child {
+    color: #212529 !important;
+    font-family: var(--bs-body-font-family) !important;
+    font-size: .8125rem !important;
+    font-weight: 700 !important;
+    letter-spacing: .08em !important;
+  }
+  [role="listbox"][aria-label="Theme"] span[class*="text-midground/50"] {
+    color: #555555 !important;
+    font-size: .75rem !important;
+  }
+  [role="listbox"][aria-label="Theme"] [role="option"][aria-selected="true"] span[class*="text-midground/50"] { color: #eaf1f8 !important; }
+
   :focus-visible {
     outline: 0;
-    box-shadow: 0 0 0 .25rem rgba(var(--bs-primary-rgb), .25);
+    box-shadow: 0 0 0 .25rem rgba(var(--bs-primary-rgb), .25) !important;
   }
-  
-  ::selection {
-    background: rgba(var(--bs-primary-rgb), .24);
-  }
-  
-  /* Tables/lists/log blocks: preserve data density without returning to harsh terminal styling. */
-  table, [role="grid"], pre {
-    font-variant-numeric: tabular-nums;
-  }
-  
+
+  ::selection { background: rgba(var(--bs-primary-rgb), .24); }
+
+  table, [role="grid"], pre { font-variant-numeric: tabular-nums; }
+
   pre {
+    color: #2d2d2d;
+    background: #f8f9fa;
     border: 1px solid var(--bs-border-color);
     border-radius: var(--bs-border-radius);
   }
-  
+
+  code { color: var(--bs-code-color); }
+
+  pre > code,
+  pre code:not(.font-courier) {
+    display: block;
+    color: #2d2d2d !important;
+    font-size: 10px !important;
+    line-height: 1.5;
+    background: transparent !important;
+    border: 0 !important;
+    box-shadow: none !important;
+    padding: 0 !important;
+    text-shadow: none;
+  }
+
+  pre code *, pre .hljs, pre .token { background: transparent !important; }
+  pre .token.property, pre .token.string, pre .hljs-attr, pre .hljs-string { color: #b83272 !important; }
+  pre .token.number, pre .hljs-number { color: #2d2d2d !important; }
+
+  :not(pre) > code,
+  code.font-courier {
+    color: #b83272;
+    background: #f8f9fa;
+    border: 1px solid #dee2e6;
+    border-radius: .25rem;
+    padding: .125rem .35rem;
+    font-size: .75rem;
+    text-shadow: none;
+  }
+
+  /* Models page chips/progress: Spacelab equivalents of the Slate fixes. */
+  span[class*="bg-emerald-500/10"], div[class*="bg-emerald-500/10"] {
+    color: #236c14 !important;
+    background: #e4f6df !important;
+    border-color: rgba(var(--bs-success-rgb), .35) !important;
+  }
+  span[class*="bg-blue-500/10"], div[class*="bg-blue-500/10"] {
+    color: #255c91 !important;
+    background: #e1effd !important;
+    border-color: rgba(var(--bs-info-rgb), .35) !important;
+  }
+  span[class*="bg-purple-500/10"], div[class*="bg-purple-500/10"] {
+    color: #5f4b8b !important;
+    background: #eee9f8 !important;
+    border-color: rgba(95, 75, 139, .28) !important;
+  }
+  span[class*="bg-muted"], div[class*="bg-muted"] { color: #555555 !important; }
+
+  div[class*="h-2"][class*="w-full"][class*="overflow-hidden"][class*="bg-muted/30"] {
+    height: .625rem !important;
+    background-color: #e9ecef !important;
+    border-radius: 999rem !important;
+    box-shadow: inset 0 1px 2px rgba(0,0,0,.14), 0 1px 0 rgba(255,255,255,.75);
+  }
+  div[class*="h-2"][class*="w-full"][class*="overflow-hidden"][class*="bg-muted/30"] > div {
+    border-radius: 0;
+    box-shadow: inset 0 1px 0 rgba(255,255,255,.22);
+  }
+  div[class*="h-2"][class*="w-full"][class*="overflow-hidden"][class*="bg-muted/30"] > div:first-child { border-top-left-radius: 999rem; border-bottom-left-radius: 999rem; }
+  div[class*="h-2"][class*="w-full"][class*="overflow-hidden"][class*="bg-muted/30"] > div:last-child { border-top-right-radius: 999rem; border-bottom-right-radius: 999rem; }
+  div[class*="bg-blue-400/60"] { background-color: #3399f3 !important; }
+  div[class*="bg-purple-400/60"] { background-color: #999999 !important; }
+  div[class*="bg-[#ffe6cb]/70"] { background-color: #d47500 !important; }
+  div[class*="bg-emerald-500/70"] { background-color: #3cb521 !important; }
+
   @media (prefers-reduced-motion: reduce) {
     *, *::before, *::after {
       animation-duration: .01ms !important;
