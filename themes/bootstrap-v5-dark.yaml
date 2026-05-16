@@ -336,6 +336,37 @@ customCSS: |
     color: var(--bs-code-color);
   }
 
+  /* Expanded session transcripts render fenced JSON inside <pre><code>.
+     Neutralize bright inline-code backgrounds there and keep code blocks Slate-dark. */
+  pre > code,
+  pre code:not(.font-courier) {
+    display: block;
+    color: #f8f9fa !important;
+    background: transparent !important;
+    border: 0 !important;
+    box-shadow: none !important;
+    padding: 0 !important;
+    text-shadow: none;
+  }
+
+  pre code *,
+  pre .hljs,
+  pre .token {
+    background: transparent !important;
+  }
+
+  pre .token.property,
+  pre .token.string,
+  pre .hljs-attr,
+  pre .hljs-string {
+    color: #f0a8cc !important;
+  }
+
+  pre .token.number,
+  pre .hljs-number {
+    color: #ffffff !important;
+  }
+
   :not(pre) > code,
   code.font-courier {
     color: #f0a8cc;
