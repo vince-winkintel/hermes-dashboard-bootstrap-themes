@@ -119,6 +119,11 @@ customCSS: |
   a { color: var(--bs-link-color); text-decoration-thickness: 0.08em; text-underline-offset: 0.18em; }
   a:hover { color: var(--bs-link-hover-color); }
 
+  /* Spacelab's bright info-blue is decorative; dashboard content links are often
+     compact, so use the darker primary blue for readable body links. */
+  main a { color: var(--bs-primary) !important; }
+  main a:hover { color: var(--bs-link-hover-color) !important; }
+
   [data-layout-variant="standard"] { text-transform: none; }
 
   /* Light theme fix: Hermes section headings use blend-lighter for dark themes;
@@ -330,7 +335,7 @@ customCSS: |
     line-height: 1.5;
     letter-spacing: 0 !important;
     text-transform: none !important;
-    color: var(--bs-link-color) !important;
+    color: var(--bs-primary) !important;
     background: transparent !important;
     border: 1px solid transparent !important;
     box-shadow: none !important;
@@ -338,6 +343,19 @@ customCSS: |
     text-decoration: underline;
     text-underline-offset: .18em;
     text-shadow: none;
+  }
+
+  /* Logs page segmented filters introduced in newer dashboards use compact
+     midground/60 buttons. Keep inactive states Bootstrap-blue and readable on
+     Spacelab white while preserving active selected buttons. */
+  main button[class*="text-midground/60"][class*="h-7"][class*="px-2.5"] {
+    color: var(--bs-primary) !important;
+    background: transparent !important;
+    text-shadow: none !important;
+  }
+  main button[class*="text-midground/60"][class*="h-7"][class*="px-2.5"]:hover {
+    color: var(--bs-link-hover-color) !important;
+    background: rgba(var(--bs-primary-rgb), .08) !important;
   }
 
   /* Config custom comboboxes/selects: match Spacelab .form-select. */
