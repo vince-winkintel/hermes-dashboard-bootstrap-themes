@@ -174,6 +174,22 @@ customCSS: |
     box-shadow: inset 0 1px 0 rgba(255,255,255,.12), 0 1px 2px rgba(0,0,0,.35);
   }
 
+  /* Filled action buttons such as Profiles > + Create should use Bootstrap/Slate
+     button typography instead of the dashboard's terminal-style mono caps. */
+  button[class*="font-mono"][class*="bg-midground"][class*="text-background-base"] {
+    font-family: var(--bs-body-font-family) !important;
+    font-size: .875rem;
+    font-weight: 400 !important;
+    line-height: 1.25;
+    letter-spacing: 0 !important;
+    text-transform: none !important;
+    color: #ffffff !important;
+    background: linear-gradient(#4f565d, #3a3f44 60%, #31363a) !important;
+    border: 1px solid #272b30;
+    padding: 1.25em .9em !important;
+    text-shadow: 0 -1px 0 rgba(0,0,0,.35);
+  }
+
   :focus-visible {
     outline: 0;
     box-shadow: 0 0 0 .25rem rgba(var(--bs-info-rgb), .35) !important;
