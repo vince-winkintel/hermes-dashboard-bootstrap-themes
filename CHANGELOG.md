@@ -9,6 +9,7 @@ Updated Bootstrap v5 Dark to a Bootswatch Slate-inspired palette.
 - Added Slate-like card/header shadows, borders, white Bootstrap-style inputs, and refreshed Sessions/Kanban screenshots.
 - Improved Models page capability chip contrast for Tools, Vision, Reasoning, and model-family chips while keeping Slate-style accent colors.
 - Restyled Models page token progress bars with Slate-style recessed tracks, pill geometry, and contextual progress colors for cache/read, reasoning, input, and output segments.
+- Updated inline code styling, including plugin slot labels such as `sessions:top`, with a dark Slate code background and readable accent text.
 
 ## 0.1.0 - 2026-05-15
 

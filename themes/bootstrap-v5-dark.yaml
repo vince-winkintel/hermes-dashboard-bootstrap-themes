@@ -199,6 +199,18 @@ customCSS: |
     color: var(--bs-code-color);
   }
 
+  :not(pre) > code,
+  code.font-courier {
+    color: #f0a8cc;
+    background: #202328;
+    border: 1px solid rgba(255,255,255,.14);
+    border-radius: .25rem;
+    padding: .125rem .35rem;
+    box-shadow: inset 0 1px 0 rgba(255,255,255,.06), 0 1px 1px rgba(0,0,0,.25);
+    font-size: .75rem;
+    text-shadow: none;
+  }
+
   /* Models page token progress bars: match Bootswatch Slate's recessed track,
      pill geometry, and contextual progress colors. */
   div[class*="h-2"][class*="w-full"][class*="overflow-hidden"][class*="bg-muted/30"] {
