@@ -1,0 +1,183 @@
+name: bootstrap-v5-light
+label: Bootstrap v5 Light
+description: Polished Bootstrap 5.3 light theme for the Hermes dashboard; portable, readable, and close to Bootstrap defaults
+
+palette:
+  background: "#ffffff"
+  midground: "#212529"
+  foreground: "#000000"
+  warmGlow: "rgba(13, 110, 253, 0.10)"
+  noiseOpacity: 0.025
+
+typography:
+  fontSans: 'system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"'
+  fontMono: 'SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace'
+  fontDisplay: 'system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif'
+  fontUrl: ""
+  baseSize: "16px"
+  lineHeight: "1.5"
+  letterSpacing: "0"
+
+layout:
+  radius: "0.375rem"
+  density: comfortable
+
+layoutVariant: standard
+
+assets:
+  bg: "none"
+
+colorOverrides:
+  card: "#ffffff"
+  cardForeground: "#212529"
+  popover: "#ffffff"
+  popoverForeground: "#212529"
+  primary: "#0d6efd"
+  primaryForeground: "#ffffff"
+  secondary: "#e9ecef"
+  secondaryForeground: "#212529"
+  muted: "#f8f9fa"
+  mutedForeground: "#6c757d"
+  accent: "#e7f1ff"
+  accentForeground: "#084298"
+  destructive: "#dc3545"
+  destructiveForeground: "#ffffff"
+  success: "#198754"
+  warning: "#ffc107"
+  border: "#dee2e6"
+  input: "#ffffff"
+  ring: "#0d6efd"
+
+componentStyles:
+  card:
+    background: "#ffffff"
+    boxShadow: "0 0.125rem 0.25rem rgba(0, 0, 0, 0.075)"
+    borderRadius: "0.375rem"
+  header:
+    background: "rgba(255, 255, 255, 0.96)"
+    boxShadow: "0 1px 0 #dee2e6"
+  footer:
+    background: "#ffffff"
+  tab:
+    borderRadius: "0.375rem 0.375rem 0 0"
+  badge:
+    borderRadius: "999px"
+  progress:
+    borderRadius: "999px"
+  backdrop:
+    background: "radial-gradient(circle at 20% 0%, rgba(13, 110, 253, 0.08), transparent 34%), #ffffff"
+
+customCSS: |
+  :root {
+    color-scheme: light;
+    /* Bootstrap 5.3 native font stacks + core design tokens. */
+    --font-sans: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    --font-mono: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+    --font-rules-compressed: var(--font-sans);
+    --font-rules-expanded: var(--font-sans);
+    --font-mondwest: var(--font-sans);
+    --bs-blue: #0d6efd; --bs-indigo: #6610f2; --bs-purple: #6f42c1; --bs-pink: #d63384;
+    --bs-red: #dc3545; --bs-orange: #fd7e14; --bs-yellow: #ffc107; --bs-green: #198754;
+    --bs-teal: #20c997; --bs-cyan: #0dcaf0; --bs-black: #000; --bs-white: #fff;
+    --bs-gray: #6c757d; --bs-gray-dark: #343a40; --bs-gray-100: #f8f9fa; --bs-gray-200: #e9ecef;
+    --bs-gray-300: #dee2e6; --bs-gray-400: #ced4da; --bs-gray-500: #adb5bd; --bs-gray-600: #6c757d;
+    --bs-gray-700: #495057; --bs-gray-800: #343a40; --bs-gray-900: #212529;
+    --bs-primary: #0d6efd; --bs-secondary: #6c757d; --bs-success: #198754; --bs-info: #0dcaf0;
+    --bs-warning: #ffc107; --bs-danger: #dc3545; --bs-light: #f8f9fa; --bs-dark: #212529;
+    --bs-primary-rgb: 13, 110, 253; --bs-secondary-rgb: 108, 117, 125; --bs-success-rgb: 25, 135, 84;
+    --bs-info-rgb: 13, 202, 240; --bs-warning-rgb: 255, 193, 7; --bs-danger-rgb: 220, 53, 69;
+    --bs-light-rgb: 248, 249, 250; --bs-dark-rgb: 33, 37, 41;
+    --bs-font-sans-serif: var(--font-sans); --bs-font-monospace: var(--font-mono);
+    --bs-body-font-family: var(--bs-font-sans-serif); --bs-body-font-size: 1rem; --bs-body-font-weight: 400;
+    --bs-body-line-height: 1.5; --bs-body-color: #212529; --bs-body-color-rgb: 33, 37, 41;
+    --bs-body-bg: #fff; --bs-body-bg-rgb: 255, 255, 255; --bs-emphasis-color: #000; --bs-emphasis-color-rgb: 0, 0, 0;
+    --bs-secondary-color: rgba(33, 37, 41, 0.75); --bs-secondary-bg: #e9ecef; --bs-tertiary-color: rgba(33, 37, 41, 0.5);
+    --bs-tertiary-bg: #f8f9fa; --bs-border-color: #dee2e6; --bs-border-color-translucent: rgba(0, 0, 0, 0.175);
+    --bs-border-radius: 0.375rem; --bs-link-color: #0d6efd; --bs-link-hover-color: #0a58ca;
+  }
+  
+  html, body, #root {
+    background: var(--bs-body-bg);
+    color: var(--bs-body-color);
+    font-family: var(--font-sans);
+    line-height: var(--bs-body-line-height);
+  }
+  
+  body, button, input, textarea, select {
+    font-family: var(--font-sans);
+    text-transform: none;
+  }
+  
+  code, pre, kbd, samp {
+    font-family: var(--font-mono);
+    text-transform: none;
+  }
+  
+  a { color: var(--bs-link-color); text-decoration-thickness: 0.08em; text-underline-offset: 0.18em; }
+  a:hover { color: var(--bs-link-hover-color); }
+  
+  /* The dashboard shell ships with an intentionally stylized uppercase terminal look.
+     This pack relaxes that into Bootstrap's daily-use text rhythm while leaving labels scannable. */
+  [data-layout-variant="standard"] {
+    text-transform: none;
+  }
+  
+  aside, nav, header, footer,
+  aside a, nav a,
+  button,
+  [role="tab"], [role="menuitem"], [role="option"],
+  .uppercase {
+    letter-spacing: .015em;
+  }
+  
+  input, textarea, select {
+    background-color: var(--bs-tertiary-bg);
+    color: var(--bs-body-color);
+    border: 1px solid var(--bs-border-color);
+    border-radius: var(--bs-border-radius);
+  }
+  
+  .text-muted-foreground {
+    color: var(--bs-secondary-color) !important;
+  }
+  
+  .border-border {
+    border-color: var(--bs-border-color) !important;
+  }
+  
+  input::placeholder, textarea::placeholder {
+    color: var(--bs-secondary-color);
+    opacity: 1;
+  }
+  
+  button, [role="button"] {
+    border-radius: var(--bs-border-radius);
+  }
+  
+  :focus-visible {
+    outline: 0;
+    box-shadow: 0 0 0 .25rem rgba(var(--bs-primary-rgb), .25);
+  }
+  
+  ::selection {
+    background: rgba(var(--bs-primary-rgb), .24);
+  }
+  
+  /* Tables/lists/log blocks: preserve data density without returning to harsh terminal styling. */
+  table, [role="grid"], pre {
+    font-variant-numeric: tabular-nums;
+  }
+  
+  pre {
+    border: 1px solid var(--bs-border-color);
+    border-radius: var(--bs-border-radius);
+  }
+  
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+      animation-duration: .01ms !important;
+      animation-iteration-count: 1 !important;
+      scroll-behavior: auto !important;
+      transition-duration: .01ms !important;
+    }
+  }
