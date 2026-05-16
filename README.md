@@ -7,7 +7,7 @@ This pack keeps Hermes' dashboard portable and local-first while making the UI f
 ## Themes
 
 - `bootstrap-v5-light.yaml` — clean Bootstrap light mode with white cards, Bootstrap blue accents, and low-noise background treatment.
-- `bootstrap-v5-dark.yaml` — Bootstrap 5.3 dark-mode palette with improved contrast for cards, forms, links, badges, and code-heavy views.
+- `bootstrap-v5-dark.yaml` — Bootswatch Slate-inspired dark mode with graphite surfaces, white links, gray body text, Slate component colors, and Bootstrap-style high-contrast inputs.
 
 ## Install
 
@@ -74,6 +74,7 @@ Recommended release QA coverage:
 
 ## Design notes
 
+- The dark theme is inspired by [Bootswatch Slate](https://bootswatch.com/slate/) v5.3.8 and its public source in [thomaspark/bootswatch](https://github.com/thomaspark/bootswatch/tree/v5/dist/slate).
 - Colors track Bootstrap 5.3 defaults where Hermes' theme schema allows it.
 - Typography uses Bootstrap's native system font stack.
 - The pack intentionally relaxes Hermes' stylized all-uppercase terminal look for better daily readability.
