@@ -5,7 +5,7 @@ source: "Bootswatch Spacelab v5.3.8 inspired by https://bootswatch.com/spacelab/
 
 palette:
   background: "#ffffff"
-  midground: "#777777"
+  midground: "#666666"
   foreground: "#2d2d2d"
   warmGlow: "rgba(68, 110, 155, 0.10)"
   noiseOpacity: 0.025
@@ -30,9 +30,9 @@ assets:
 
 colorOverrides:
   card: "#ffffff"
-  cardForeground: "#777777"
+  cardForeground: "#666666"
   popover: "#ffffff"
-  popoverForeground: "#777777"
+  popoverForeground: "#666666"
   primary: "#446e9b"
   primaryForeground: "#ffffff"
   secondary: "#999999"
@@ -92,9 +92,9 @@ customCSS: |
     --bs-light-rgb: 238, 238, 238; --bs-dark-rgb: 51, 51, 51;
     --bs-font-sans-serif: var(--font-sans); --bs-font-monospace: var(--font-mono);
     --bs-body-font-family: var(--bs-font-sans-serif); --bs-body-font-size: 1rem; --bs-body-font-weight: 400;
-    --bs-body-line-height: 1.5; --bs-body-color: #777; --bs-body-color-rgb: 119, 119, 119;
+    --bs-body-line-height: 1.5; --bs-body-color: #666; --bs-body-color-rgb: 102, 102, 102;
     --bs-body-bg: #fff; --bs-body-bg-rgb: 255, 255, 255; --bs-emphasis-color: #2d2d2d; --bs-emphasis-color-rgb: 45, 45, 45;
-    --bs-secondary-color: rgba(119, 119, 119, 0.75); --bs-secondary-bg: #eee; --bs-tertiary-color: rgba(119, 119, 119, 0.5);
+    --bs-secondary-color: rgba(85, 85, 85, 0.82); --bs-secondary-bg: #eee; --bs-tertiary-color: rgba(85, 85, 85, 0.64);
     --bs-tertiary-bg: #f8f9fa; --bs-border-color: #dee2e6; --bs-border-color-translucent: rgba(0, 0, 0, 0.175);
     --bs-border-radius: 0.375rem; --bs-link-color: #3399f3; --bs-link-hover-color: #0a6ebd; --bs-code-color: #e83e8c;
   }
@@ -146,11 +146,134 @@ customCSS: |
     opacity: 1;
   }
 
-  .text-muted-foreground { color: #666666 !important; }
+  .text-muted-foreground { color: #555555 !important; }
+  .text-foreground { color: #555555 !important; }
+  .text-success, [class*="text-success"] { color: #2a7d17 !important; }
+  .text-warning, [class*="text-warning"] { color: #9a5500 !important; }
+  [class*="text-[#ffff89]"], [class*="text-yellow"], [class*="text-amber"] { color: #9a5500 !important; }
+  [class*="text-[#ffe6cb]"] { color: #9a5500 !important; }
+  main a[class*="text-midground"],
+  main button[class*="text-midground"],
+  main button[class*="text-info"],
+  main a[class*="text-info"] { color: var(--bs-primary) !important; }
+  main span[class*="tracking-[0.2em]"][class*="uppercase"] {
+    color: #555555 !important;
+    background: #f8f9fa !important;
+    border-color: var(--bs-border-color) !important;
+  }
+  span[class*="border-midground"] { color: #333333 !important; }
+  main span[class*="bg-success/15"][class*="text-success"] {
+    color: #236c14 !important;
+    background: #e4f6df !important;
+    border-color: rgba(var(--bs-success-rgb), .35) !important;
+  }
+  label, .hermes-kanban-docs-link { color: #555555 !important; }
+
+  /* Plugin surfaces that were authored for dark palettes: remap to Spacelab light contrast. */
+  .ha-tier-step,
+  .ha-state-badge,
+  .ha-tier-badge {
+    color: #555555 !important;
+    background: #f8f9fa !important;
+    border-color: var(--bs-border-color) !important;
+  }
+  .ha-tier-gold { color: #9a5500 !important; background: #fff3cd !important; border-color: rgba(var(--bs-warning-rgb), .35) !important; }
+  .ha-tier-diamond { color: #0a6ebd !important; background: #e1effd !important; border-color: rgba(var(--bs-info-rgb), .35) !important; }
+  .ha-tier-silver { color: #555555 !important; background: #f1f3f5 !important; border-color: #ced4da !important; }
+  .ha-kicker,
+  .ha-stat-label,
+  .ha-stat-hint,
+  .ha-card-category,
+  .ha-description,
+  .ha-evidence,
+  .ha-tier-arrow,
+  .ha-criteria summary,
+  .ha-pills button,
+  .hermes-kanban-column-sub,
+  .hermes-kanban-card-meta,
+  .hermes-kanban-assignee,
+  .hermes-kanban-ago,
+  .hermes-kanban-empty,
+  .hermes-kanban-progress,
+  .hermes-kanban-priority,
+  .hermes-kanban .text-muted-foreground,
+  .hermes-kanban-docs-link {
+    color: #333333 !important;
+  }
+  .ha-pills button {
+    background: rgba(255,255,255,.92) !important;
+    border-color: var(--bs-border-color) !important;
+  }
+  .ha-pills button[aria-pressed="true"],
+  .ha-pills button[data-state="active"] {
+    color: #ffffff !important;
+    background: linear-gradient(#7191b3, #446e9b 50%, #3f658f) !important;
+    border-color: #36587c !important;
+  }
+  .ha-share-trigger {
+    color: #446e9b !important;
+    background: #e1effd !important;
+    border-color: rgba(var(--bs-primary-rgb), .35) !important;
+  }
   .border-border { border-color: var(--bs-border-color) !important; }
   .bg-card\/80, .bg-card { background-color: #ffffff !important; }
 
   button, [role="button"] { border-radius: var(--bs-border-radius); }
+
+  /* Sidebar navigation: avoid low-opacity cyan on white; use accessible Spacelab blues/grays. */
+  aside {
+    color: #555555 !important;
+    background-color: rgba(255, 255, 255, .98) !important;
+    border-color: var(--bs-border-color) !important;
+  }
+
+  aside .text-midground,
+  aside a[class*="text-midground"],
+  aside button[class*="text-midground"] {
+    color: var(--bs-primary) !important;
+  }
+
+  aside a[class*="opacity-60"],
+  aside a[class*="text-muted-foreground"],
+  aside button[class*="text-muted-foreground"],
+  aside .text-muted-foreground,
+  aside [class*="text-midground/50"],
+  aside [class*="text-muted-foreground/50"],
+  aside [class*="text-muted-foreground/70"] {
+    color: #555555 !important;
+    opacity: 1 !important;
+  }
+
+  aside a[aria-current="page"],
+  aside a[class*="text-midground"]:not([class*="opacity-60"]) {
+    color: var(--bs-primary) !important;
+    background: linear-gradient(90deg, rgba(var(--bs-primary-rgb), .14), rgba(var(--bs-primary-rgb), .04)) !important;
+    box-shadow: inset 3px 0 0 var(--bs-primary);
+  }
+
+  aside a:hover,
+  aside button:hover {
+    color: #0a6ebd !important;
+    background: rgba(var(--bs-primary-rgb), .08) !important;
+    opacity: 1 !important;
+  }
+
+  aside svg { color: currentColor !important; opacity: 1 !important; }
+
+  aside span[class*="uppercase"],
+  aside span[class*="opacity-30"] {
+    color: #555555 !important;
+    opacity: 1 !important;
+  }
+
+  aside .text-success,
+  aside [class*="text-success"] {
+    color: #2a7d17 !important;
+  }
+
+  aside [class*="border-current"] {
+    border-color: var(--bs-border-color) !important;
+  }
 
   /* Spacelab-style raised primary action buttons, preserving Bootstrap-pack fonts. */
   button[class*="font-mono"][class*="bg-midground"][class*="text-background-base"] {

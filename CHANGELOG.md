@@ -9,6 +9,8 @@ Updated Bootstrap v5 Light to a Bootswatch Spacelab-inspired palette while keepi
 - Added Spacelab-style raised blue gradients for primary action buttons while preserving Bootstrap/system fonts.
 - Ported the earlier dark-theme refinements into light equivalents for Profiles action buttons, Config custom selects, success-green toggles, theme selector contrast, Models chips/progress bars, inline code, and expanded Sessions transcript code blocks with compact 10px code text.
 - Installed `bootstrap-v5-light` locally and applied it in the dashboard for review.
+- Improved Spacelab light sidebar contrast by replacing low-opacity cyan nav text with accessible Spacelab primary blue and dark gray states.
+- Strengthened light-theme contrast for small badges, muted labels, Achievements plugin badges/filters/cards, and Kanban metadata/labels/placeholders using Spacelab-compatible dark grays and tinted surfaces.
 
 ## 0.1.1 - 2026-05-15
 
