@@ -7,6 +7,7 @@ Updated Bootstrap v5 Dark to a Bootswatch Slate-inspired palette.
 - Matched Slate v5.3.8 core tokens from https://bootswatch.com/slate/ and https://github.com/thomaspark/bootswatch/tree/v5/dist/slate.
 - Reworked dark theme colors around Slate graphite body `#272b30`, card surface `#32383e`, primary `#3a3f44`, secondary `#7a8288`, info `#5bc0de`, success `#62c462`, warning `#f89406`, danger `#ee5f5b`, white links, and soft gray body text.
 - Added Slate-like card/header shadows, borders, white Bootstrap-style inputs, and refreshed Sessions/Kanban screenshots.
+- Improved Models page capability chip contrast for Tools, Vision, Reasoning, and model-family chips while keeping Slate-style accent colors.
 
 ## 0.1.0 - 2026-05-15
 

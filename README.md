@@ -59,6 +59,8 @@ Current QA captures:
 
 ![Bootstrap v5 Dark — Kanban](screenshots/bootstrap-v5-dark-kanban.png)
 
+![Bootstrap v5 Dark — Models](screenshots/bootstrap-v5-dark-models.png)
+
 ![Bootstrap v5 Light — Config](screenshots/bootstrap-v5-light-config.png)
 
 ![Bootstrap v5 Light — Plugins](screenshots/bootstrap-v5-light-plugins.png)

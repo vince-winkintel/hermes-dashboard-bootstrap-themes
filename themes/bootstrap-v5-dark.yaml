@@ -199,6 +199,52 @@ customCSS: |
     color: var(--bs-code-color);
   }
 
+  /* Capability chips on the Models page need extra contrast in Slate.
+     Tailwind's default dark text colors are too dim at the dashboard's 10px chip size. */
+  span[class*="bg-emerald-500/10"][class*="text-emerald"],
+  span[class*="bg-blue-500/10"][class*="text-blue"],
+  span[class*="bg-purple-500/10"][class*="text-purple"] {
+    color: #f8f9fa !important;
+    background: linear-gradient(#3a3f44, #272b30 85%) !important;
+    border: 1px solid rgba(255,255,255,.16);
+    border-radius: .25rem;
+    box-shadow: inset 0 1px 0 rgba(255,255,255,.10), 0 1px 2px rgba(0,0,0,.35);
+    font-size: .6875rem;
+    line-height: 1.25;
+    text-shadow: 0 -1px 0 rgba(0,0,0,.45);
+  }
+
+  span[class*="bg-emerald-500/10"][class*="text-emerald"] {
+    border-color: rgba(98,196,98,.55);
+    background: linear-gradient(180deg, rgba(98,196,98,.24), rgba(39,43,48,.95)) !important;
+  }
+
+  span[class*="bg-blue-500/10"][class*="text-blue"] {
+    border-color: rgba(91,192,222,.55);
+    background: linear-gradient(180deg, rgba(91,192,222,.24), rgba(39,43,48,.95)) !important;
+  }
+
+  span[class*="bg-purple-500/10"][class*="text-purple"] {
+    border-color: rgba(176,139,255,.55);
+    background: linear-gradient(180deg, rgba(176,139,255,.24), rgba(39,43,48,.95)) !important;
+  }
+
+  span[class*="bg-emerald-500/10"][class*="text-emerald"] svg,
+  span[class*="bg-blue-500/10"][class*="text-blue"] svg,
+  span[class*="bg-purple-500/10"][class*="text-purple"] svg {
+    color: currentColor !important;
+    opacity: .95;
+  }
+
+  span[class*="bg-muted"][class*="text-muted-foreground"][class*="text-[10px]"] {
+    color: #ced4da !important;
+    background: #3a3f44 !important;
+    border: 1px solid rgba(255,255,255,.12);
+    border-radius: .25rem;
+    font-size: .6875rem;
+    line-height: 1.25;
+  }
+
   @media (prefers-reduced-motion: reduce) {
     *, *::before, *::after {
       animation-duration: .01ms !important;
