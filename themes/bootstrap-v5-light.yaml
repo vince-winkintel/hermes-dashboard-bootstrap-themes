@@ -121,6 +121,23 @@ customCSS: |
 
   [data-layout-variant="standard"] { text-transform: none; }
 
+  /* Light theme fix: Hermes section headings use blend-lighter for dark themes;
+     on white Spacelab cards that blends toward white and makes headings vanish. */
+  main .blend-lighter,
+  main h1, main h2, main h3, main h4, main h5, main h6,
+  main .font-expanded,
+  main .font-compressed {
+    mix-blend-mode: normal !important;
+    color: var(--bs-gray-800) !important;
+    text-shadow: none !important;
+  }
+
+  main h3.font-expanded,
+  main h3[class*="tracking-[0.08em]"] {
+    color: var(--bs-primary) !important;
+    font-weight: 700 !important;
+  }
+
   aside, nav, header, footer,
   aside a, nav a,
   button,

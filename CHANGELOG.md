@@ -11,6 +11,7 @@ Updated Bootstrap v5 Light to a Bootswatch Spacelab-inspired palette while keepi
 - Installed `bootstrap-v5-light` locally and applied it in the dashboard for review.
 - Improved Spacelab light sidebar contrast by replacing low-opacity cyan nav text with accessible Spacelab primary blue and dark gray states.
 - Strengthened light-theme contrast for small badges, muted labels, Achievements plugin badges/filters/cards, and Kanban metadata/labels/placeholders using Spacelab-compatible dark grays and tinted surfaces.
+- Fixed Sessions section headings such as `CONNECTED PLATFORMS` and `RECENT SESSIONS` by disabling dark-theme `blend-lighter` blending on light cards and rendering them in Spacelab primary blue.
 
 ## 0.1.1 - 2026-05-15
 
