@@ -174,7 +174,7 @@ customCSS: |
     box-shadow: inset 0 1px 0 rgba(255,255,255,.12), 0 1px 2px rgba(0,0,0,.35);
   }
 
-  /* Filled action buttons such as Profiles > + Create should use Bootstrap/Slate
+  /* Filled action buttons such as Profiles > + Create/Save should use Bootstrap/Slate
      button typography instead of the dashboard's terminal-style mono caps. */
   button[class*="font-mono"][class*="bg-midground"][class*="text-background-base"] {
     font-family: var(--bs-body-font-family) !important;
@@ -186,8 +186,35 @@ customCSS: |
     color: #ffffff !important;
     background: linear-gradient(#4f565d, #3a3f44 60%, #31363a) !important;
     border: 1px solid #272b30;
-    padding: 1.25em .9em !important;
     text-shadow: 0 -1px 0 rgba(0,0,0,.35);
+  }
+
+  button[class*="font-mono"][class*="bg-midground"][class*="text-background-base"][class*="leading-0"] {
+    padding: 1.25em .9em !important;
+  }
+
+  button[class*="font-mono"][class*="bg-midground"][class*="text-background-base"][class*="text-[0.7rem]"] {
+    padding: .375rem .75rem !important;
+    line-height: 1.5;
+  }
+
+  /* Secondary inline actions such as Profiles edit-mode Cancel read better as
+     Slate link buttons than as tiny terminal buttons. */
+  button[class*="font-mono"][class*="bg-transparent"][class*="text-current"][class*="text-[0.7rem]"] {
+    font-family: var(--bs-body-font-family) !important;
+    font-size: .875rem;
+    font-weight: 400 !important;
+    line-height: 1.5;
+    letter-spacing: 0 !important;
+    text-transform: none !important;
+    color: var(--bs-link-color) !important;
+    background: transparent !important;
+    border: 1px solid transparent !important;
+    box-shadow: none !important;
+    padding: .375rem .75rem !important;
+    text-decoration: underline;
+    text-underline-offset: .18em;
+    text-shadow: none;
   }
 
   :focus-visible {
