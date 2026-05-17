@@ -334,6 +334,9 @@ customCSS: |
   header[role="banner"] .font-expanded,
   header[role="banner"] .font-compressed {
     color: #2d2d2d !important;
+    opacity: 1 !important;
+    mix-blend-mode: normal !important;
+    text-shadow: none !important;
   }
 
   header[role="banner"] input,
