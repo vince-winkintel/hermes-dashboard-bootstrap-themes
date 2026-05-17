@@ -252,7 +252,7 @@ customCSS: |
   aside .text-midground,
   aside a[class*="text-midground"],
   aside button[class*="text-midground"] {
-    color: var(--bs-primary) !important;
+    color: #3f658f !important;
   }
 
   aside a[class*="opacity-60"],
@@ -268,7 +268,7 @@ customCSS: |
 
   aside a[aria-current="page"],
   aside a[class*="text-midground"]:not([class*="opacity-60"]) {
-    color: var(--bs-primary) !important;
+    color: #3f658f !important;
     background: linear-gradient(90deg, rgba(var(--bs-primary-rgb), .14), rgba(var(--bs-primary-rgb), .04)) !important;
     box-shadow: inset 3px 0 0 var(--bs-primary);
   }
@@ -297,6 +297,33 @@ customCSS: |
     border-color: var(--bs-border-color) !important;
   }
 
+  /* Force dashboard shell surfaces onto Spacelab light backgrounds. The
+     dashboard root keeps utility classes such as bg-black; overriding them here
+     makes computed colors match the visible light theme for accessibility tools. */
+  div[class*="bg-black"][class*="text-midground"],
+  div[class*="bg-black"][class*="uppercase"] {
+    color: #2d2d2d !important;
+    background: #f5f5f5 !important;
+  }
+
+  header[role="banner"],
+  main {
+    color: #2d2d2d !important;
+    background: #f5f5f5 !important;
+  }
+
+  header[role="banner"] h1,
+  header[role="banner"] .font-expanded,
+  header[role="banner"] .font-compressed {
+    color: #2d2d2d !important;
+  }
+
+  header[role="banner"] input,
+  header[role="banner"] svg {
+    color: #333333 !important;
+    border-color: var(--bs-border-color) !important;
+  }
+
   /* Spacelab-style raised primary action buttons, preserving Bootstrap-pack fonts. */
   button[class*="font-mono"][class*="bg-midground"][class*="text-background-base"] {
     font-family: var(--bs-body-font-family) !important;
@@ -306,15 +333,17 @@ customCSS: |
     letter-spacing: 0 !important;
     text-transform: none !important;
     color: #ffffff !important;
-    background: linear-gradient(#7191b3, #446e9b 50%, #3f658f) !important;
-    border: 1px solid #36587c !important;
+    background-color: #3f658f !important;
+    background-image: linear-gradient(#446e9b, #3f658f 50%, #36587c) !important;
+    border: 1px solid #1f3146 !important;
     box-shadow: inset 0 1px 0 rgba(255,255,255,.16), 0 .125rem .25rem rgba(0,0,0,.12) !important;
     text-shadow: -1px -1px 0 rgba(0,0,0,.1);
   }
 
   button[class*="font-mono"][class*="bg-midground"][class*="text-background-base"]:hover {
-    background: linear-gradient(#6687ab, #3a5e84 50%, #36587c) !important;
-    border-color: #335374 !important;
+    background-color: #36587c !important;
+    background-image: linear-gradient(#3f658f, #36587c 50%, #2d4967) !important;
+    border-color: #1f3146 !important;
   }
 
   button[class*="font-mono"][class*="bg-midground"][class*="text-background-base"]:not([class*="px-2"]) {
@@ -402,7 +431,7 @@ customCSS: |
   [role="switch"], [role="switch"] > span { border-radius: 999rem; }
   [role="switch"][aria-checked="true"] {
     background: linear-gradient(#59d83e, #3cb521 50%, #339a1c) !important;
-    border-color: #30911a !important;
+    border-color: #1f6411 !important;
     box-shadow: inset 0 1px 0 rgba(255,255,255,.25), 0 0 0 1px rgba(var(--bs-success-rgb), .18), 0 1px 2px rgba(0,0,0,.2) !important;
   }
   [role="switch"][aria-checked="true"] > span {
@@ -490,6 +519,49 @@ customCSS: |
   pre .token.property, pre .token.string, pre .hljs-attr, pre .hljs-string { color: #b83272 !important; }
   pre .token.number, pre .hljs-number { color: #2d2d2d !important; }
 
+  /* WCAG AA contrast pass: form/control outlines, light-theme action buttons,
+     Kanban warnings, and achievement plugin accents. */
+  input.flex,
+  textarea,
+  select,
+  button[role="combobox"][class*="bg-background/40"],
+  button[role="combobox"],
+  .hermes-kanban-docs-link,
+  .hermes-kanban-column-add,
+  .ha-pills button,
+  button[class*="bg-background/40"][class*="text-background-base"]:not([role="combobox"]),
+  button[class*="text-background-base"]:not([role="combobox"]) {
+    border-color: #8a8f94 !important;
+  }
+
+  button[class*="bg-background/40"][class*="text-background-base"]:not([role="combobox"]),
+  button[class*="text-background-base"]:not([role="combobox"]) {
+    color: #ffffff !important;
+    background-color: #3f658f !important;
+    background-image: linear-gradient(#446e9b, #3f658f 50%, #36587c) !important;
+    border-color: #1f3146 !important;
+    text-shadow: -1px -1px 0 rgba(0,0,0,.18) !important;
+  }
+
+  .hermes-kanban-attention-icon,
+  .hermes-kanban-warning-badge {
+    color: #7a4500 !important;
+  }
+
+  .ha-icon,
+  .ha-icon svg {
+    color: #3f658f !important;
+  }
+
+  .ha-share-trigger {
+    border-color: transparent !important;
+  }
+
+  .ha-chip.ha-tier-copper,
+  .ha-tier-copper {
+    color: #7b4a1a !important;
+  }
+
   :not(pre) > code,
   code.font-courier {
     color: #b83272;
@@ -535,6 +607,148 @@ customCSS: |
   div[class*="bg-purple-400/60"] { background-color: #999999 !important; }
   div[class*="bg-[#ffe6cb]/70"] { background-color: #d47500 !important; }
   div[class*="bg-emerald-500/70"] { background-color: #3cb521 !important; }
+
+  /* Final WCAG AA tightening for light controls after app utility CSS wins. */
+  input[class*="border"],
+  textarea[class*="border"],
+  select[class*="border"],
+  button[role="combobox"][class*="border"],
+  header[role="banner"] input[class*="border"],
+  main input[class*="border"],
+  .hermes-kanban-docs-link,
+  .hermes-kanban-column-add,
+  .ha-pills button {
+    border-color: #7f858b !important;
+  }
+
+  button[class*="text-background-base"]:not([role="combobox"]),
+  button[class*="font-mono"][class*="bg-midground"][class*="text-background-base"] {
+    border-color: #dbe3ea !important;
+  }
+
+  button[class*="text-background-base"]:not([role="combobox"]) svg,
+  button[class*="font-mono"][class*="bg-midground"][class*="text-background-base"] svg,
+  button[class*="grid-cols-[auto_1fr_auto]"] svg {
+    color: #ffffff !important;
+  }
+
+  main svg { color: #2f7fc7; }
+  main button[class*="text-background-base"] svg,
+  main button[class*="bg-midground"] svg,
+  main button[class*="grid-cols-[auto_1fr_auto]"] svg { color: #ffffff !important; }
+  main button[class*="bg-transparent"] svg,
+  main button[class*="text-destructive"] svg,
+  header[role="banner"] button[class*="bg-transparent"] svg {
+    color: #3f658f !important;
+  }
+  header[role="banner"] button[class*="bg-transparent"][class*="text-destructive"] svg,
+  main button[class*="bg-transparent"][class*="text-destructive"] svg {
+    color: #b00020 !important;
+  }
+
+  button[aria-label="Switch theme"] svg,
+  button[aria-label="Switch theme"] span {
+    color: #3f658f !important;
+  }
+
+  main div.p-4 button[class*="grid-cols-[auto_1fr_auto]"],
+  main div.p-4 button[class*="text-background-base"] {
+    border: 1px solid #dbe3ea !important;
+    border-color: #dbe3ea !important;
+  }
+
+  button.font-mono:not([class*="bg-midground"]):not([class*="grid-cols-[auto_1fr_auto]"]),
+  button.group.relative.flex:not([class*="bg-midground"]) {
+    border-color: #7f858b !important;
+  }
+
+  main .grid-cols-\[auto_1fr_auto\][class*="text-background-base"] {
+    border: 1px solid #dbe3ea !important;
+    border-color: #dbe3ea !important;
+  }
+
+  .flex.sm\:flex-col button svg,
+  .flex[class*="sm:flex-col"] button svg,
+  .flex[class*="sm\\:flex-col"] button svg {
+    color: #3f658f !important;
+  }
+
+  .flex.sm\:flex-col button[aria-current="page"] svg,
+  .flex[class*="sm:flex-col"] button[aria-current="page"] svg,
+  .flex[class*="sm\\:flex-col"] button[aria-current="page"] svg,
+  .flex.sm\:flex-col button[class*="bg-midground"] svg,
+  .flex[class*="sm:flex-col"] button[class*="bg-midground"] svg,
+  .flex[class*="sm\\:flex-col"] button[class*="bg-midground"] svg {
+    color: #ffffff !important;
+  }
+
+  button[class*="text-background-base"]:not([class*="grid-cols-[auto_1fr_auto]"]) {
+    border-color: #7f858b !important;
+  }
+
+  button[class*="bg-background/40"][class*="text-background-base"][class*="grid-cols-[auto_1fr_auto]"]:not([role="combobox"]),
+  main .grid-cols-\[auto_1fr_auto\][class*="text-background-base"],
+  button[class*="text-background-base"]:not([role="combobox"]) {
+    border: 1px solid transparent !important;
+    border-color: transparent !important;
+  }
+
+  button[class*="grid-cols-[auto_1fr_auto]"][class*="bg-transparent"],
+  button.font-mono[class*="grid-cols-[auto_1fr_auto]"][class*="text-midground"] {
+    border-color: #7f858b !important;
+  }
+
+  .flex.sm\:flex-col button svg,
+  .flex[class*="sm:flex-col"] button svg,
+  .flex[class*="sm\\:flex-col"] button svg {
+    color: #3f658f !important;
+  }
+
+  main .flex.sm\:flex-col button,
+  main .flex[class*="sm:flex-col"] button,
+  main .flex[class*="sm\\:flex-col"] button {
+    color: #ffffff !important;
+    background-color: #3f658f !important;
+    border-color: transparent !important;
+  }
+
+  main .flex.sm\:flex-col button svg,
+  main .flex[class*="sm:flex-col"] button svg,
+  main .flex[class*="sm\\:flex-col"] button svg,
+  .flex[class*="sm:flex-col"] button[class*="bg-foreground/90"] svg,
+  .flex[class*="sm\\:flex-col"] button[class*="bg-foreground/90"] svg,
+  .flex.sm\:flex-col button[aria-current="page"] svg,
+  .flex[class*="sm:flex-col"] button[aria-current="page"] svg,
+  .flex[class*="sm\\:flex-col"] button[aria-current="page"] svg,
+  .flex.sm\:flex-col button[class*="bg-midground"] svg,
+  .flex[class*="sm:flex-col"] button[class*="bg-midground"] svg,
+  .flex[class*="sm\\:flex-col"] button[class*="bg-midground"] svg {
+    color: #ffffff !important;
+  }
+
+  .flex.sm\:flex-col button:not([aria-current="page"]):not([class*="bg-midground"]):not([class*="bg-foreground/90"]) svg,
+  .flex[class*="sm:flex-col"] button:not([aria-current="page"]):not([class*="bg-midground"]):not([class*="bg-foreground/90"]) svg,
+  .flex[class*="sm\\:flex-col"] button:not([aria-current="page"]):not([class*="bg-midground"]):not([class*="bg-foreground/90"]) svg {
+    color: #3f658f !important;
+  }
+
+  .text-destructive,
+  [class*="text-destructive"] {
+    color: #b00020 !important;
+  }
+
+  button.font-mono.group.relative[class*="text-background-base"],
+  button.font-mono.group.relative[class*="bg-midground"],
+  .hermes-kanban button.font-mono.group.relative,
+  .ha-page button.font-mono.group.relative {
+    border-color: transparent !important;
+  }
+
+  main .flex.sm\:flex-col button span,
+  main .flex[class*="sm:flex-col"] button span,
+  main .flex[class*="sm\\:flex-col"] button span {
+    color: #ffffff !important;
+  }
 
   @media (prefers-reduced-motion: reduce) {
     *, *::before, *::after {
