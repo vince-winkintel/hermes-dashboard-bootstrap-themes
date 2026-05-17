@@ -1,5 +1,15 @@
 # Changelog
 
+## 1.0.1 - 2026-05-17
+
+Maintenance release for Hermes Agent v0.14.0 dashboard compatibility and WCAG contrast fixes.
+
+- Fixed Bootstrap v5 Light shell surfaces so dashboard gutters and main-page backgrounds stay light instead of being inverted by the default cyberpunk blend overlay.
+- Restored readable light-theme branding and page headings by disabling dark-theme blend modes/text effects on the Bootstrap light shell.
+- Completed WCAG AA contrast hardening across visible dashboard routes for compact controls, buttons, switches, plugin cards, Kanban controls, and Achievements UI.
+- Improved Bootstrap v5 Dark contrast for filled action-button borders and switch components surfaced by the stricter audit pass.
+- Verified YAML validation, installed theme sync, and PR validation checks.
+
 ## 1.0.0 - 2026-05-16
 
 First public release of the Hermes Dashboard Bootstrap Themes pack.
