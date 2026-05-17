@@ -292,6 +292,34 @@ customCSS: |
     line-height: 1.5;
   }
 
+  /* Plugin action buttons can combine a dark translucent background with
+     text-background-base, which makes labels nearly invisible in Slate. */
+  button[class*="bg-background/40"][class*="text-background-base"]:not([role="combobox"]) {
+    font-family: var(--bs-body-font-family) !important;
+    font-weight: 400 !important;
+    letter-spacing: 0 !important;
+    text-transform: none !important;
+    color: #ffffff !important;
+    background: linear-gradient(#4f565d, #3a3f44 60%, #31363a) !important;
+    border: 1px solid #272b30 !important;
+    text-shadow: 0 -1px 0 rgba(0,0,0,.35) !important;
+    box-shadow: inset 0 1px 0 rgba(255,255,255,.12), 0 1px 2px rgba(0,0,0,.35) !important;
+  }
+
+  button[class*="bg-background/40"][class*="text-background-base"]:not([role="combobox"]):hover {
+    color: #ffffff !important;
+    background: linear-gradient(#5a626a, #444b52 60%, #363c42) !important;
+  }
+
+  button[class*="bg-background/40"][class*="text-background-base"]:not([role="combobox"]):disabled,
+  button[class*="bg-background/40"][class*="text-background-base"]:not([role="combobox"])[aria-disabled="true"] {
+    color: #adb5bd !important;
+    background: #2b3035 !important;
+    border-color: #495057 !important;
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
+
   /* Secondary inline actions such as Profiles edit-mode Cancel read better as
      Slate link buttons than as tiny terminal buttons. */
   button[class*="font-mono"][class*="bg-transparent"][class*="text-current"][class*="text-[0.7rem]"] {
@@ -459,6 +487,95 @@ customCSS: |
     border-radius: .25rem;
     font-size: .6875rem;
     line-height: 1.25;
+  }
+
+  /* WCAG AA contrast pass for compact controls and plugin surfaces. Slate's
+     stock near-black button borders disappear against dark cards; use the
+     mid-gray Bootstrap border only where controls need a visible boundary. */
+  button:not(:disabled),
+  [role="button"]:not(:disabled),
+  .hermes-kanban-docs-link,
+  .hermes-kanban-column-add,
+  .ha-pills button,
+  .ha-share-trigger {
+    border-color: #8c969e !important;
+  }
+
+  div[role="radiogroup"][class*="border-midground"] {
+    border-color: #8c969e !important;
+  }
+
+  .text-destructive,
+  [class*="text-destructive"] {
+    color: #ff9999 !important;
+  }
+
+  .hermes-kanban-progress,
+  .hermes-kanban-progress--full {
+    color: #ffffff !important;
+    text-shadow: 0 -1px 0 rgba(0,0,0,.45);
+  }
+
+  .ha-state-badge,
+  .ha-tier-badge,
+  .ha-criteria summary,
+  .ha-tier-step {
+    color: #ced4da !important;
+  }
+
+  .ha-tier-copper,
+  .ha-state-badge:where([class*="copper"], [class*="discovered"]),
+  .ha-tier-badge:where([class*="copper"], [class*="target"]) {
+    color: #ffcc99 !important;
+  }
+
+  .ha-tier-olympian,
+  .ha-state-badge:where([class*="olympian"]),
+  .ha-tier-badge:where([class*="olympian"]) {
+    color: #d8b4fe !important;
+  }
+
+  .ha-share-trigger {
+    color: #ffffff !important;
+    background: #3a3f44 !important;
+    text-shadow: 0 -1px 0 rgba(0,0,0,.45) !important;
+  }
+
+  button[class*="text-background-base"]:not([role="combobox"]),
+  button[class*="bg-background/40"][class*="text-background-base"]:not([role="combobox"]),
+  button[class*="bg-midground"][class*="text-background-base"]:not([role="combobox"]) {
+    border-color: #8c969e !important;
+  }
+
+  button[role="radio"][aria-checked="true"],
+  div[role="radiogroup"] button[aria-checked="true"],
+  div[role="radiogroup"] button[data-state="checked"],
+  .sm\:sticky button[aria-pressed="true"],
+  .sm\:sticky button[data-state="active"] {
+    border-color: #272b30 !important;
+  }
+
+  span.inline-flex[class*="bg-muted"],
+  span[class*="bg-muted"][class*="text-muted-foreground"],
+  span.inline-flex[class*="bg-primary/15"][class*="text-primary"] {
+    color: #ced4da !important;
+  }
+
+  button[class*="bg-foreground/90"][class*="text-background"] {
+    border-color: #272b30 !important;
+  }
+
+  button[class*="text-background-base"]:not([role="combobox"]),
+  button[class*="bg-background/40"][class*="text-background-base"]:not([role="combobox"]),
+  button[class*="bg-midground"][class*="text-background-base"]:not([role="combobox"]),
+  .hermes-kanban button.font-mono.group.relative,
+  .ha-page button.font-mono.group.relative {
+    border-color: transparent !important;
+  }
+
+  [role="switch"] {
+    color: transparent !important;
+    border-color: transparent !important;
   }
 
   @media (prefers-reduced-motion: reduce) {
