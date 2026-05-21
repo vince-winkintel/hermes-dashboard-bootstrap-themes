@@ -6,7 +6,7 @@ This pack includes a light theme inspired by Bootswatch Spacelab and a dark them
 
 ## Themes
 
-- `bootstrap-v5-light.yaml` — Bootswatch Spacelab-inspired light mode with silvery white surfaces, Spacelab blue actions, readable gray body text, and polished Bootstrap controls.
+- `bootstrap-v5-light.yaml` — Bootswatch Spacelab-inspired light mode with dark-theme rendering parity, silvery white surfaces, Spacelab blue actions, readable gray body text, and polished Bootstrap controls.
 - `bootstrap-v5-dark.yaml` — Bootswatch Slate-inspired dark mode with graphite surfaces, white links, gray body text, Slate component colors, and Bootstrap-style high-contrast controls.
 
 ## Preview
@@ -91,7 +91,7 @@ PY
 - The light theme is inspired by [Bootswatch Spacelab](https://bootswatch.com/spacelab/) v5.3.8 and its public source in [thomaspark/bootswatch](https://github.com/thomaspark/bootswatch/tree/v5/dist/spacelab).
 - The dark theme is inspired by [Bootswatch Slate](https://bootswatch.com/slate/) v5.3.8 and its public source in [thomaspark/bootswatch](https://github.com/thomaspark/bootswatch/tree/v5/dist/slate).
 - Typography uses Bootstrap's native system font stack.
-- Colors track Bootstrap/Bootswatch v5.3 tokens where Hermes' theme schema allows it.
+- Colors track Bootstrap/Bootswatch v5.3 tokens where Hermes' theme schema allows it; the light theme intentionally mirrors the dark theme's component coverage and changes color-bearing values to Spacelab equivalents where practical.
 - Dashboard-specific CSS refinements improve daily-use contrast for Sessions, Kanban, Models, Profiles, Config controls, plugins, code blocks, badges, and compact metadata.
 - No remote fonts, images, scripts, telemetry, or external assets are required by the themes.
 

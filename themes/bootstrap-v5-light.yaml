@@ -1,11 +1,11 @@
 name: bootstrap-v5-light
 label: Bootstrap v5 Light
-description: Bootswatch Spacelab-inspired light theme for the Hermes dashboard; silvery Bootstrap surfaces, Spacelab blue actions, readable controls, and daily-use contrast
-source: "Bootswatch Spacelab v5.3.8 inspired by https://bootswatch.com/spacelab/"
+description: Bootswatch Spacelab-inspired light theme for the Hermes dashboard; dark-theme rendering parity with Spacelab color definitions, silvery Bootstrap surfaces, readable controls, and daily-use contrast
+source: "Bootswatch Spacelab v5.3.8 inspired by https://bootswatch.com/spacelab/; component coverage mirrors bootstrap-v5-dark where practical"
 
 palette:
   background: "#ffffff"
-  midground: "#666666"
+  midground: "#777777"
   foreground: "#2d2d2d"
   warmGlow: "rgba(68, 110, 155, 0.10)"
   noiseOpacity: 0.025
@@ -52,21 +52,21 @@ colorOverrides:
 componentStyles:
   card:
     background: "#ffffff"
-    boxShadow: "0 0.125rem 0.25rem rgba(0, 0, 0, 0.075)"
+    boxShadow: "inset 0 1px 0 rgba(255,255,255,.85), 0 .5rem 1rem rgba(0,0,0,.08)"
     borderRadius: "0.375rem"
   header:
-    background: "rgba(255, 255, 255, 0.96)"
-    boxShadow: "0 1px 0 #dee2e6"
+    background: "linear-gradient(#ffffff, #f8f9fa 60%, #eeeeee)"
+    boxShadow: "0 1px 0 rgba(255,255,255,.85), 0 1px 3px rgba(0,0,0,.16)"
   footer:
     background: "#ffffff"
   tab:
     borderRadius: "0.375rem 0.375rem 0 0"
   badge:
-    borderRadius: "999px"
+    borderRadius: "0.25rem"
   progress:
-    borderRadius: "999px"
+    borderRadius: "0.375rem"
   backdrop:
-    background: "radial-gradient(circle at 20% 0%, rgba(68, 110, 155, 0.08), transparent 34%), #ffffff"
+    background: "radial-gradient(circle at 20% 0%, rgba(68, 110, 155, 0.10), transparent 36%), linear-gradient(180deg, #ffffff 0%, #f8f9fa 28%, #eeeeee 100%)"
 
 customCSS: |
   :root {
@@ -92,7 +92,7 @@ customCSS: |
     --bs-light-rgb: 238, 238, 238; --bs-dark-rgb: 51, 51, 51;
     --bs-font-sans-serif: var(--font-sans); --bs-font-monospace: var(--font-mono);
     --bs-body-font-family: var(--bs-font-sans-serif); --bs-body-font-size: 1rem; --bs-body-font-weight: 400;
-    --bs-body-line-height: 1.5; --bs-body-color: #666; --bs-body-color-rgb: 102, 102, 102;
+    --bs-body-line-height: 1.5; --bs-body-color: #777; --bs-body-color-rgb: 119, 119, 119;
     --bs-body-bg: #fff; --bs-body-bg-rgb: 255, 255, 255; --bs-emphasis-color: #2d2d2d; --bs-emphasis-color-rgb: 45, 45, 45;
     --bs-secondary-color: rgba(85, 85, 85, 0.82); --bs-secondary-bg: #eee; --bs-tertiary-color: rgba(85, 85, 85, 0.64);
     --bs-tertiary-bg: #f8f9fa; --bs-border-color: #dee2e6; --bs-border-color-translucent: rgba(0, 0, 0, 0.175);
@@ -242,6 +242,19 @@ customCSS: |
 
   button, [role="button"] { border-radius: var(--bs-border-radius); }
 
+  button:not(:disabled), [role="button"]:not(:disabled) {
+    box-shadow: inset 0 1px 0 rgba(255,255,255,.45), 0 1px 2px rgba(0,0,0,.12);
+  }
+
+  button:not(:disabled),
+  [role="button"]:not(:disabled),
+  .hermes-kanban-docs-link,
+  .hermes-kanban-column-add,
+  .ha-pills button,
+  .ha-share-trigger {
+    border-color: #8a8f94 !important;
+  }
+
   /* Sidebar navigation: avoid low-opacity cyan on white; use accessible Spacelab blues/grays. */
   aside {
     color: #555555 !important;
@@ -354,9 +367,9 @@ customCSS: |
     letter-spacing: 0 !important;
     text-transform: none !important;
     color: #ffffff !important;
-    background-color: #3f658f !important;
-    background-image: linear-gradient(#446e9b, #3f658f 50%, #36587c) !important;
-    border: 1px solid #1f3146 !important;
+    background-color: #446e9b !important;
+    background-image: linear-gradient(#7191b3, #446e9b 50%, #3f658f) !important;
+    border: 1px solid #36587c !important;
     box-shadow: inset 0 1px 0 rgba(255,255,255,.16), 0 .125rem .25rem rgba(0,0,0,.12) !important;
     text-shadow: -1px -1px 0 rgba(0,0,0,.1);
   }
@@ -558,9 +571,9 @@ customCSS: |
   button[class*="bg-background/40"][class*="text-background-base"]:not([role="combobox"]),
   button[class*="text-background-base"]:not([role="combobox"]) {
     color: #ffffff !important;
-    background-color: #3f658f !important;
-    background-image: linear-gradient(#446e9b, #3f658f 50%, #36587c) !important;
-    border-color: #1f3146 !important;
+    background-color: #446e9b !important;
+    background-image: linear-gradient(#7191b3, #446e9b 50%, #3f658f) !important;
+    border-color: #36587c !important;
     text-shadow: -1px -1px 0 rgba(0,0,0,.18) !important;
   }
 
@@ -628,6 +641,35 @@ customCSS: |
   div[class*="bg-purple-400/60"] { background-color: #999999 !important; }
   div[class*="bg-[#ffe6cb]/70"] { background-color: #d47500 !important; }
   div[class*="bg-emerald-500/70"] { background-color: #3cb521 !important; }
+
+  span[class*="bg-blue-400/60"] { background-color: #3399f3 !important; }
+  span[class*="bg-purple-400/60"] { background-color: #999999 !important; }
+  span[class*="bg-[#ffe6cb]/70"] { background-color: #d47500 !important; }
+  span[class*="bg-emerald-500/70"] { background-color: #3cb521 !important; }
+
+  span[class*="bg-emerald-500/10"][class*="text-emerald"],
+  span[class*="bg-blue-500/10"][class*="text-blue"],
+  span[class*="bg-purple-500/10"][class*="text-purple"] {
+    border-radius: .25rem;
+    font-size: .6875rem;
+    line-height: 1.25;
+  }
+
+  span[class*="bg-emerald-500/10"][class*="text-emerald"] svg,
+  span[class*="bg-blue-500/10"][class*="text-blue"] svg,
+  span[class*="bg-purple-500/10"][class*="text-purple"] svg {
+    color: currentColor !important;
+    opacity: .95;
+  }
+
+  span[class*="bg-muted"][class*="text-muted-foreground"][class*="text-[10px]"] {
+    color: #555555 !important;
+    background: #f8f9fa !important;
+    border: 1px solid #dee2e6;
+    border-radius: .25rem;
+    font-size: .6875rem;
+    line-height: 1.25;
+  }
 
   /* Final WCAG AA tightening for light controls after app utility CSS wins. */
   input[class*="border"],
