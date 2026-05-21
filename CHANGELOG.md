@@ -1,5 +1,15 @@
 # Changelog
 
+## 1.0.2 - 2026-05-21
+
+Light-theme rendering parity release for the Bootstrap v5 theme pack.
+
+- Aligned the Spacelab light theme with the dark theme's rendering approach where practical.
+- Added light-mode equivalents for button, model chip, progress, card, badge, and compact component styling.
+- Preserved Bootstrap/system typography while moving light-theme tokens toward Spacelab body gray and raised component treatments.
+- Updated README design notes to document the dark-theme rendering parity goal.
+- Closed #3 via PR #4.
+
 ## 1.0.1 - 2026-05-17
 
 Maintenance release for Hermes Agent v0.14.0 dashboard compatibility and WCAG contrast fixes.
