@@ -45,6 +45,7 @@ Expected names include:
 
 Check both light and dark themes on:
 
+- Chat / embedded terminal
 - Sessions
 - Kanban boards
 - Models
@@ -52,6 +53,12 @@ Check both light and dark themes on:
 - Plugins and plugin status cards
 - Achievements plugin, if installed
 - Profiles
+- MCP
+- Channels
+- Webhooks
+- Pairing
+- Keys / credentials
+- System / Debug Share
 - Gateway/status controls
 - Logs or another code-heavy view
 - Theme selector dropdown
