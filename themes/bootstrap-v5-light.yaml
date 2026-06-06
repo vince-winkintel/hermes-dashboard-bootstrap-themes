@@ -271,9 +271,18 @@ customCSS: |
   aside a[class*="opacity-60"],
   aside a[class*="text-muted-foreground"],
   aside button[class*="text-muted-foreground"],
+  aside [class*="text-text-secondary"],
+  aside [class*="text-text-tertiary"],
   aside .text-muted-foreground,
   aside [class*="text-midground/50"],
+  aside [class*="text-midground/60"],
+  aside [class*="text-midground/65"],
+  aside [class*="text-midground/70"],
+  aside [class*="text-midground/75"],
+  aside [class*="text-midground/80"],
   aside [class*="text-muted-foreground/50"],
+  aside [class*="text-muted-foreground/60"],
+  aside [class*="text-muted-foreground/65"],
   aside [class*="text-muted-foreground/70"] {
     color: #555555 !important;
     opacity: 1 !important;
@@ -296,7 +305,13 @@ customCSS: |
   aside svg { color: currentColor !important; opacity: 1 !important; }
 
   aside span[class*="uppercase"],
-  aside span[class*="opacity-30"] {
+  aside span[class*="opacity-30"],
+  aside span[class*="opacity-40"],
+  aside span[class*="opacity-50"],
+  aside span[class*="opacity-60"],
+  aside span[class*="opacity-65"],
+  aside span[class*="opacity-70"],
+  aside span[class*="opacity-80"] {
     color: #555555 !important;
     opacity: 1 !important;
   }
@@ -308,6 +323,16 @@ customCSS: |
 
   aside [class*="border-current"] {
     border-color: var(--bs-border-color) !important;
+  }
+
+  /* Hermes v0.16+ admin panels use text-text-secondary/tertiary for compact
+     filter and section labels. Keep those labels readable on light surfaces. */
+  main span[class*="text-text-secondary"],
+  main span[class*="text-text-tertiary"],
+  main label[class*="text-text-secondary"],
+  main label[class*="text-text-tertiary"] {
+    color: #555555 !important;
+    opacity: 1 !important;
   }
 
   /* Force dashboard shell surfaces onto Spacelab light backgrounds. The

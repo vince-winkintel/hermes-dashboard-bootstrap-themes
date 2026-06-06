@@ -222,6 +222,41 @@ customCSS: |
     color: var(--bs-secondary-color) !important;
   }
 
+  /* Hermes v0.16+ sidebar/system metadata uses low-opacity utility classes
+     for section labels, gateway status rows, and the footer version. Keep
+     those tiny labels AA-readable against the Slate sidebar background. */
+  aside span[class*="uppercase"],
+  aside span[class*="opacity-30"],
+  aside span[class*="opacity-40"],
+  aside span[class*="opacity-50"],
+  aside span[class*="opacity-60"],
+  aside span[class*="opacity-65"],
+  aside span[class*="opacity-70"],
+  aside span[class*="opacity-80"],
+  aside [class*="text-text-secondary"],
+  aside [class*="text-text-tertiary"],
+  aside [class*="text-midground/50"],
+  aside [class*="text-midground/60"],
+  aside [class*="text-midground/65"],
+  aside [class*="text-midground/70"],
+  aside [class*="text-midground/75"],
+  aside [class*="text-midground/80"],
+  aside [class*="text-muted-foreground/50"],
+  aside [class*="text-muted-foreground/60"],
+  aside [class*="text-muted-foreground/65"],
+  aside [class*="text-muted-foreground/70"] {
+    color: #ced4da !important;
+    opacity: 1 !important;
+  }
+
+  main span[class*="text-text-secondary"],
+  main span[class*="text-text-tertiary"],
+  main label[class*="text-text-secondary"],
+  main label[class*="text-text-tertiary"] {
+    color: #ced4da !important;
+    opacity: 1 !important;
+  }
+
   /* Toggle switches: keep the off state subdued, but make checked/on states
      visibly success-green so they are easy to distinguish in Config. */
   [role="switch"] {
