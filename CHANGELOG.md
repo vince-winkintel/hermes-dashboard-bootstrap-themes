@@ -1,5 +1,15 @@
 # Changelog
 
+## 1.0.3 - 2026-06-05
+
+Hermes Agent v0.16 dashboard compatibility release for Bootstrap v5 theme metadata contrast.
+
+- Improved Bootstrap v5 Light and Dark coverage for Hermes v0.16 sidebar/system metadata classes.
+- Forced low-opacity sidebar/status labels and compact text-token labels to accessible Bootstrap-derived colors.
+- Expanded the QA checklist to include newer Hermes v0.16+ dashboard/admin surfaces.
+- Verified YAML validation, installed theme sync, GitHub Actions validation, and live dashboard computed-style contrast checks.
+- Closed #6 via PR #7.
+
 ## 1.0.2 - 2026-05-21
 
 Light-theme rendering parity release for the Bootstrap v5 theme pack.
